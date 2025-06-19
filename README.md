@@ -55,8 +55,8 @@ Với sự kết hợp giữa các công nghệ tiên tiến như Docker, Airflo
 
 ```bash
 # Clone repository
-git clone https://github.com/dminhtri2808/DataPlatform.git
-cd DataPlatform
+git clone https://github.com/nhtann0206/Data-Craw
+cd DataPlatform-main
 
 # Tạo môi trường ảo và activate
 python3 -m venv venv
