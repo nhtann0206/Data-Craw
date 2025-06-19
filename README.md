@@ -53,6 +53,8 @@ Với sự kết hợp giữa các công nghệ tiên tiến như Docker, Airflo
 
 ### 1. Cài đặt ban đầu
 
+*** Note: Yêu cầu hạ Python về 3.8 để khởi chạy không gặp lỗi
+
 ```bash
 # Clone repository
 git clone https://github.com/nhtann0206/Data-Craw
