@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# VS Code
+.vscode/
+
+# Environments
+.env
+.venv/
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Mac/Linux/Windows system files
+.DS_Store
+Thumbs.db
+
+# Docker
+volume/
+
+# Data directories
+data/postgres/
+data/minio/
+
+# Python artifacts
+*$py.class
+*.so
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+.installed.cfg
+
+# Virtual environments
+env/
+ENV/
+
+# IDE files
+.idea/
+*.swp
+*.swo
+
+# Logs and runtime files
+log_management/**/
+!log_management/**/.gitkeep
+*.log
+logs/
+
+# Environment variables - never commit these!
+.env.local
+.env.development
+.env.production

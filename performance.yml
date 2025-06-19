@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  # Tăng tài nguyên cho các container chính
+  api:  # Thay đổi từ fastapi sang api để khớp với docker-compose.yml
+    mem_limit: 1g
+    cpus: 1.0
+    environment:
+      - WORKERS=2
+      - MAX_REQUESTS=1000
+      - TIMEOUT=120
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --workers ${WORKERS:-2}
+  
+  ui:  # Thay đổi từ streamlit sang ui để khớp với docker-compose.yml
+    mem_limit: 2g
+    cpus: 2.0
+    environment:
+      - MEMORY_OPTIMIZATION=true
+  
+  airflow-scheduler:
+    mem_limit: 2g
+    cpus: 1.5
+    environment:
+      - AIRFLOW__SCHEDULER__MAX_THREADS=4
+      - AIRFLOW__SCHEDULER__PARSING_PROCESSES=2
+  
+  airflow-webserver:
+    mem_limit: 1.5g
+    cpus: 1.0
+    environment:
+      - AIRFLOW__WEBSERVER__WORKERS=2
+      - AIRFLOW__WEBSERVER__WORKER_REFRESH_INTERVAL=3600
+
+  postgres:
+    mem_limit: 2g
+    cpus: 1.5
+    command: postgres -c shared_buffers=512MB -c effective_cache_size=1GB -c work_mem=64MB

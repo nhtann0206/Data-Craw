@@ -1,0 +1,22 @@
+[server]
+runOnSave = true
+enableCORS = false
+enableXsrfProtection = false
+fileWatcherType = "watchdog"
+
+# Disable module watching for problematic modules
+[server.fileWatcherPatterns]
+ignore = ["*/torch/*", "*/tensorflow/*"]
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+serverPort = 8501
+
+[theme]
+base = "light"
+primaryColor = "#FF4B4B"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+font = "sans serif"

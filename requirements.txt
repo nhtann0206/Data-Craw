@@ -1,0 +1,40 @@
+# Core dependencies
+fastapi>=0.95.0
+uvicorn>=0.21.0
+pandas>=1.5.0
+numpy>=1.24.0
+pydantic>=2.0.0
+psycopg2-binary>=2.9.6
+requests>=2.28.0
+python-multipart>=0.0.5
+yfinance>=0.2.31  # Thêm thư viện Yahoo Finance
+
+# Data science & ML tools
+scikit-learn>=1.0.0
+# Fix dependency conflict by specifying compatible versions
+tensorflow==2.15.0  # This version works with keras 2.12.0
+keras<3.0.0  # Ensure we don't get keras 3.x which has breaking changes
+xgboost>=1.7.0
+plotly>=5.14.0
+
+# Fixed PyTorch version to avoid compatibility issues with Streamlit
+torch==2.0.1
+torchvision==0.15.2
+
+# Chatbot dependencies
+langchain>=0.1.0
+langchain-community>=0.0.13
+langchain-postgres>=0.0.2
+langchain-huggingface>=0.0.2
+sentence-transformers>=2.2.2
+pgvector>=0.2.0
+
+# Streamlit UI
+streamlit>=1.22.0
+watchdog>=3.0.0  # Thêm để cải thiện auto-reload
+
+# AWS/Storage tools
+boto3>=1.38.17
+
+# Ensure these packages are installed for PostgreSQL compatibility
+psycopg>=3.1.12
